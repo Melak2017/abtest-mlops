@@ -8,6 +8,7 @@ from sklearn.metrics import mean_squared_error
 from sklearn.ensemble import GradientBoostingClassifier
 
 from decision_tree import handler
+from app_logger import App_Logger
 
 
 def loss_function(actual, pred):
