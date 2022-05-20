@@ -1,3 +1,5 @@
+
+  
 import pandas as pd
 import numpy as np
 
@@ -38,7 +40,6 @@ class DataCleaning:
 
     '''
     functions to get information about who responded to the ads
-
     '''
 
     def response(self, df: pd.DataFrame):

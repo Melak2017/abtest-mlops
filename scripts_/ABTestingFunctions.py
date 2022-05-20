@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon May 16 14:13:15 2022
-
 @author: kiiru
 """
 
@@ -79,5 +78,4 @@ class ABTesting:
             Returns the p_value for an A/B test
         """
         return scs.binom(Control, p_A).pmf(p_B * Exposed)
-    
-    
+        

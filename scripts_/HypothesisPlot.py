@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 Created on Mon May 16 14:02:24 2022
-
 @author: kiiru
 """
 import sys
@@ -77,5 +76,3 @@ class HypothesisPlot:
         plt.xlabel('d')
         plt.ylabel('PDF')
         plt.show()
-        
-        
