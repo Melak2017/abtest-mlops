@@ -1,0 +1,4 @@
+outs:
+- md5: 0b442be4476459fcb81f8444706fd1c4
+  size: 39240
+  path: browser_chrome_mobile.csv
