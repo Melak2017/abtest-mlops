@@ -4,6 +4,9 @@ import dvc.api
 # To Split our train data
 from sklearn.model_selection import train_test_split
 
+# To Preproccesing our data
+from sklearn.preprocessing import LabelEncoder
+
 class Utils:
     def load_data_dvc(self,tag:str, data_path: str, repo:str) -> pd.DataFrame:
         """
@@ -40,12 +43,22 @@ class Utils:
             print("Save failed...")
         return df
 
-    def split_train_test_val(df:pd.DataFrame, size:tuple)-> list:
+    def split_train_test_val(X:pd.DataFrame, Y:pd.DataFrame, size:tuple)-> list:
         """
         Split the data into train, test and validation.
         """
-        train, test = train_test_split(df, train_size=size[0], test_size=size[1]+size[2], random_state=42)
-        test.shape
-        test, val = train_test_split(test, train_size=size[1]/(size[1]+size[2]), test_size=size[2]/(size[1]+size[2]), random_state=42)
-        return [train, test, val]
+        train_x, temp_x, train_y, temp_y = train_test_split(X, Y, train_size=size[0], test_size=size[1]+size[2], random_state=42)
+        test_x, val_x, test_y, val_y = train_test_split(temp_x, temp_y, train_size=size[1]/(size[1]+size[2]), test_size=size[2]/(size[1]+size[2]), random_state=42)
+        return train_x, train_y, test_x, test_y, val_x, val_y
+
+    def encode_features(df:pd.DataFrame)-> pd.DataFrame:
+        """
+        Encode features using LabelEncoder.
+        """
+        features = df.columns
+        for feature in features:
+            le = LabelEncoder()
+            le.fit(df[feature])
+            df[feature] = le.transform(df[feature])
+        return df
         
