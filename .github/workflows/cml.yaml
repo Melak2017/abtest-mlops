@@ -12,9 +12,9 @@ jobs:
         run: |
           echo "## Data Viz" >> report.md
           echo "### Confusion Matrix" >> report.md
-          #cml publish ./images/confusion_matrix.png --md >> report.md
+          cml publish ./notebooks/images/confusion_matrix.png --md >> report.md
 
           echo "### Feature Importance" >> report.md
-          cml publish ./images/feature_importance.png --md >> report.md
+          cml publish ./notebooks/images/feature_importance.png --md >> report.md
           # cat report.md
           cml send-comment report.md
