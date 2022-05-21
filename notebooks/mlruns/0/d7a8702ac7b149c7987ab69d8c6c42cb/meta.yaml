@@ -1,0 +1,15 @@
+artifact_uri: file:///home/teddy/dev/learning/10%20academy/working/AB-Hypohesis-Testing_mlops/notebooks/mlruns/0/d7a8702ac7b149c7987ab69d8c6c42cb/artifacts
+end_time: 1653141863443
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+name: ''
+run_id: d7a8702ac7b149c7987ab69d8c6c42cb
+run_uuid: d7a8702ac7b149c7987ab69d8c6c42cb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1653141861481
+status: 3
+tags: []
+user_id: teddy
