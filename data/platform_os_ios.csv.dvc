@@ -1,0 +1,4 @@
+outs:
+- md5: b29eb35da3d5afb0b6a43f7026810802
+  size: 604
+  path: platform_os_ios.csv

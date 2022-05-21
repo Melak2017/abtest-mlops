@@ -1,4 +1,5 @@
 [core]
     remote = dvc-remote
 ['remote "dvc-remote"']
-    url = C:/Users/melak/AppData/Local/Temp/dvc-storage
+    url = gdrive://1h61TqhQbIImqOAAwjozXgn31Bnwki9sT
+
