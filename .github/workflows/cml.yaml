@@ -1,20 +1,19 @@
-name: model-metrics
-on:
-  pull_request:
-
+name: model-training
+on: [pull_request]
 jobs:
   run:
     runs-on: ubuntu-latest
-    container: docker://ghcr.io/iterative/cml:0-dv2-base1
     steps:
       - uses: actions/checkout@v2
-      - name: Show metrics
+      - uses: actions/setup-python@v2
+      - uses: iterative/setup-cml@v1
+      - name: Train model
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           echo "## Data Viz" >> report.md
           echo "### Confusion Matrix" >> report.md
-          #cml publish ./images/confusion_matrix.png --md >> report.md
+          cml publish ./images/confusion_matrix.png --md >> report.md
 
           echo "### Feature Importance" >> report.md
           cml publish ./images/feature_importance.png --md >> report.md
