@@ -199,8 +199,8 @@ class DecisionTreeModel:
             mlflow.log_figure(cm_plot, "confusion_matrix.png")
             mlflow.log_figure(feature_importance_plot,
                               "feature_importance.png")
-            cm_plot.savefig("./images/confusion_matrix.png")
-            feature_importance_plot.savefig("./images/feature_importance.png")
+            cm_plot.savefig("../images/confusion_matrix.png")
+            feature_importance_plot.savefig("../images/feature_importance.png")
             mlflow.log_dict(feature_importance.to_json(), "feature_importance.json")
 
             mlflow.sklearn.log_model(
@@ -332,8 +332,8 @@ class XGBClassifierModel:
             mlflow.log_figure(cm_plot, "confusion_matrix.png")
             mlflow.log_figure(feature_importance_plot,
                               "feature_importance.png")
-            cm_plot.savefig("./images/confusion_matrix.png")
-            feature_importance_plot.savefig("./images/feature_importance.png")
+            cm_plot.savefig("../images/confusion_matrix.png")
+            feature_importance_plot.savefig("../images/feature_importance.png")
             mlflow.log_dict(feature_importance.to_json(), "feature_importance.json")
 
             mlflow.sklearn.log_model(
@@ -498,8 +498,8 @@ class LogisticRegressionModel:
             mlflow.log_figure(cm_plot, "confusion_matrix.png")
             mlflow.log_figure(feature_importance_plot,
                               "feature_importance.png")
-            cm_plot.savefig("./images/confusion_matrix.png")
-            feature_importance_plot.savefig("./images/feature_importance.png")
+            cm_plot.savefig("../images/confusion_matrix.png")
+            feature_importance_plot.savefig("../images/feature_importance.png")
             mlflow.log_dict(feature_importance.to_json(), "feature_importance.json")
 
             mlflow.sklearn.log_model(
